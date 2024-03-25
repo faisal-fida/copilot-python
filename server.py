@@ -18,5 +18,5 @@ async def startup_event():
 @app.post("/copilot/completion/")
 async def copilot_completion(prompt: str, language: str = "python"):
     if not github_auth.access_token:
-        return {"message": "Token not available. Please try again later."}
+        return {"message": "Token not available."}
     return await github_copilot.get_completion(prompt, language)
