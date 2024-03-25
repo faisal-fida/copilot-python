@@ -13,7 +13,6 @@ class GitHubCopilot:
                     headers={"authorization": f"Bearer {self.access_token}"},
                     json={
                         "prompt": prompt,
-                        "suffix": "",
                         "max_tokens": 1000,
                         "temperature": 0,
                         "top_p": 1,
