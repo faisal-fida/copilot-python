@@ -27,7 +27,7 @@ class GitHubAuth:
             print(f"Please visit {verification_uri} and enter code {user_code} to authenticate.")
 
         while True:
-            await asyncio.sleep(5)
+            await asyncio.sleep(10)
             response = await client.post(
                 "https://github.com/login/oauth/access_token",
                 headers={
